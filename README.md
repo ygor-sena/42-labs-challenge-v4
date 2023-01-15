@@ -2,7 +2,7 @@
 
 ## Considerações iniciais sobre o Labs 4º Edição
 
-Este README.md descreve de maneira sucinta o desafio para a 4º edição do Labs. Caso queira ler o programa de necessidades (subject) completo do desafio e/ou ler detalhadamente sobre a implementação do projeto, consulte o GitHub Wiki correspondente na aba `Wiki` ou diretamente neste link: (https://github.com/42sp/42labs-selection-process-v4-ygor-sena/wiki)
+Este README.md descreve de maneira sucinta o desafio para a 4º edição do Labs. Caso queira ler o programa de necessidades (subject) completo do desafio e/ou ler detalhadamente sobre a implementação do projeto, consulte o GitHub Wiki correspondente na aba `Wiki` ou diretamente neste link: (https://github.com/ygor-sena/42-labs-challenge-v4/wiki)
 
 ## Sobre o projeto
 
@@ -62,7 +62,7 @@ Decompression time is: 0.003033
 
 ## Ferramentas utilizadas
 
-Foram utilizados durante o desafio ferramentas de planejamento e desenvolvimento de projeto, como [Jira Software](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=144583555677&campaign=19313279983&creative=642044821574&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p74591032830&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIVs7OG0HiV4C44cOCe5FxJGUo46e__WcWF0gflyWMFt_ER08gwYGChoCdeIQAvD_BwE&gclsrc=aw.ds) e fluxo de trabalho por troncos (branch workflow) no prsente GitHub, [Effie](https://www.effie.pro/) para compilação de referências, anotação e visualização de ideias. Para maiores detalhes, consultar a seção correspondente no [GitHub Wiki](https://github.com/42sp/42labs-selection-process-v4-ygor-sena/wiki/Ferramentas-utilizadas) do projeto.
+Foram utilizados durante o desafio ferramentas de planejamento e desenvolvimento de projeto, como [Jira Software](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=144583555677&campaign=19313279983&creative=642044821574&device=c&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p74591032830&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIVs7OG0HiV4C44cOCe5FxJGUo46e__WcWF0gflyWMFt_ER08gwYGChoCdeIQAvD_BwE&gclsrc=aw.ds) e fluxo de trabalho por troncos (branch workflow) no prsente GitHub, [Effie](https://www.effie.pro/) para compilação de referências, anotação e visualização de ideias. Para maiores detalhes, consultar a seção correspondente no [GitHub Wiki](https://github.com/ygor-sena/42-labs-challenge-v4/wiki/Ferramentas-utilizadas) do projeto.
 
 ## Conceitos aprendidos durante o processo
 
@@ -97,4 +97,4 @@ Foram utilizados durante o desafio ferramentas de planejamento e desenvolvimento
 
 ## Referências de projeto
 
-Consultar seção correspondente no [GitHub Pages](https://github.com/42sp/42labs-selection-process-v4-ygor-sena/wiki/Refer%C3%AAncias-de-projeto) do projeto.
+Consultar seção correspondente no [GitHub Pages](https://github.com/ygor-sena/42-labs-challenge-v4/wiki/Refer%C3%AAncias-de-projeto) do projeto.
