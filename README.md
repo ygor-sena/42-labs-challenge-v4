@@ -11,7 +11,7 @@ O projeto desta edição consiste na implementação de dois programas, `encoder
 
 ## Compilação, utilização e funcionamento do projeto
 
-#### 1) Copie o este reposiório para sua estação de trabalho local
+#### 1) Copie este repositório para sua estação de trabalho local
 
 ```html
 git clone git@github.com:42sp/42labs-selection-process-v4-ygor-sena.git
@@ -29,7 +29,7 @@ make
 ./decoder
 ```
 
-Caso queira executar o programa procurando por vazamentos de memória, basta inicializa-lo da seguinte maneira:
+Caso queira executar o programa procurando por vazamentos de memória, basta inicializá-lo da seguinte maneira:
 
 ```html
 valgrind --leak-check=full --show-leak-kinds=all ./decoder
@@ -97,4 +97,4 @@ Foram utilizados durante o desafio ferramentas de planejamento e desenvolvimento
 
 ## Referências de projeto
 
-Consultar seção correspondente no [GitHub Pages](https://github.com/ygor-sena/42-labs-challenge-v4/wiki/Refer%C3%AAncias-de-projeto) do projeto.
+Consultar seção correspondente no [GitHub Wiki](https://github.com/ygor-sena/42-labs-challenge-v4/wiki/Refer%C3%AAncias-de-projeto) do projeto.
