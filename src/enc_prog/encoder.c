@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:21:50 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 02:24:54 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:22:52 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,26 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 		err_exit("Usage: ./encoder <string_to_write>");
 
-	compress_file(&info, argv[1]);
     open_semaphores(&sem, ENCODER);
-	/* 1 */
+	compress_file(&info, argv[1]);
+
+	/*	[ENCODER/DECODER SEMAPHORE AND SHM IPC]
+		1st step: send file size content */
     send_file_size(&sem, &shm_enc, &info);
-	/* 3 */
+
+	/*	3rd step: send frequency table to decoder */
 	send_freq_table(&sem, &shm_enc, &shm_dec, &info);
-	/* 5 */
+
+	/*	5th step: get file size from decoder */
 	get_total_bytes(&sem, &shm_dec, &info);
-	/* 7 */
-	/* SHOW DECODED */
+
+	/*	7th step: get decoded text */
     get_unzipped_text(&sem, &shm_dec, &info);
-	/* 9 */
+
+	/*	9th step: get decompression run time */
 	get_unzipped_time(&sem, &shm_dec, &info);
 
+	/*	10th step: print information received from decoder */
 	print_unzip_result(&info);
 	
 	free_encoder(&info, &shm_enc, &sem);

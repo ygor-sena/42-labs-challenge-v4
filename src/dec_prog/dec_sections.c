@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 01:03:55 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 02:59:29 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:01:08 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	print_total_bytes(t_semaphore *sem, t_posix_shm *shm_enc, t_posix_shm *shm_
 {
 	sem_wait(sem->encoder);
 	read_shm_int(shm_enc, "SHM_ENCODER_FNAME");
-	printf("Reading from encoder...\n");
 	*(out)->total_bytes = *(size_t *) shm_enc->addr;
 	set_shm_int(shm_dec, "SHM_DECODER_FNAME", (u_int *)out->total_bytes, sizeof(u_int));
 	read_shm_int(shm_enc, "SHM_ENCODER_FNAME");

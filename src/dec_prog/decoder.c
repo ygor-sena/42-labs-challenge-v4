@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:04:24 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 02:04:09 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:22:04 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,18 @@ int main(void)
 
     out.comp_bytes = malloc(sizeof(size_t));
 	out.total_bytes = malloc(sizeof(size_t));
+	printf("Waiting for encoder data...\n");
 
-	/* GET FILE SIZE */
-	/* 2 */
+	/*	2nd step: read file size from encoder and send it back */
 	print_total_bytes(&sem, &shm_enc, &shm_dec, &out);
 
-	/* 	GET FREQ_TABLE
-		BUILD HUFFMAN */
-	/* 4 */
+	/*	4th step: get frequency table and send compressed bytes content */
 	get_freq_table(&sem, &shm_enc, &shm_dec, &in, &out);
-	
-	/* 6 */
+
+	/*	6th step: send decoded text to encoder */
 	send_decoded_txt(&sem, &shm_enc, &out);
 
-	/* 8 */
+	/*	8th step: send decompression run time to encoder */
 	send_decompression_time(&sem, &shm_enc, &in, &out);
 
 	free_decoder(&in, &out, &shm_dec, &sem);

@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:03:33 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 10:28:29 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:34:27 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ typedef struct s_info
  * @brief This function gets the file size passed as parameter, read its
  * content and saves it to a string variable. After that, it creates a table
  * of characters frequency that will the used to generate a list and a huffman
- * tree. After that, it creates a dictionary of bits for each found character,
+ * tree. Then, it creates a dictionary of bits for each found character,
  * encodes them and compress the information so that it can be sent to decoder
  * program.
  * @param info Struct with necessary information for enconder operation.
  * @param file File to be compressed.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  * Otherwise, it exits with err_exit() if something go wrong.
  */
 void	compress_file(t_info *info, char *file);
@@ -80,7 +80,7 @@ void	free_encoder(t_info *info, t_posix_shm *shm, t_semaphore *sem);
  * @param shm_enc Reads content from encoder shared memory.
  * @param info Struct with necessary information for enconder operation.
  * 
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  * Otherwise, it exits with err_exit() if something go wrong.
  */
 void	send_file_size(t_semaphore *sem, t_posix_shm *shm_enc, t_info *info);
@@ -88,15 +88,15 @@ void	send_file_size(t_semaphore *sem, t_posix_shm *shm_enc, t_info *info);
 /**
  * @brief This function sends to decoder program the frequency table which
  * allows the decoder program to recreate the dictionary necessary to unzip
- * the compressed file. It also receives the the length of the file before
+ * the compressed file. It also receives the length of the file before
  * compression from decoder program and prints it to the standard output.
  * 
  * @param sem Semaphores that were accessed by encoder program.
  * @param shm_enc Reads content from encoder shared memory.
- * @param shm_dec Reads content from decpder shared memory.
+ * @param shm_dec Reads content from decoder shared memory.
  * @param info Struct with necessary information for enconder operation.
  * 
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  * Otherwise, it exits with err_exit() if something go wrong.
  */
 void	send_freq_table(t_semaphore *sem, t_posix_shm *shm_enc, t_posix_shm *shm_dec, t_info *info);
@@ -106,7 +106,7 @@ void	send_freq_table(t_semaphore *sem, t_posix_shm *shm_enc, t_posix_shm *shm_de
  * file to be compressed.
  * 
  * @param sem Semaphores that were accessed by encoder program.
- * @param shm_dec Reads content from decpder shared memory.
+ * @param shm_dec Reads content from decoder shared memory.
  * @param info Struct with necessary information for enconder operation.
  * 
  * @return (void) Successfully do the operations descrited at brief.
@@ -119,10 +119,10 @@ void	get_total_bytes(t_semaphore *sem, t_posix_shm *shm_dec, t_info *info);
  * the standard output the unzipped text after decompression.
  * 
  * @param sem Semaphores that were accessed by encoder program.
- * @param shm_dec Reads content from decpder shared memory.
+ * @param shm_dec Reads content from decoder shared memory.
  * @param info Struct with necessary information for enconder operation.
  * 
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  * Otherwise, it exits with err_exit() if something go wrong.
  */
 void	get_unzipped_text(t_semaphore *sem, t_posix_shm *shm_dec, t_info *info);
@@ -132,10 +132,10 @@ void	get_unzipped_text(t_semaphore *sem, t_posix_shm *shm_dec, t_info *info);
  * decompression operation.
  * 
  * @param sem Semaphores that were accessed by encoder program.
- * @param shm_dec Reads content from decpder shared memory.
+ * @param shm_dec Reads content from decoder shared memory.
  * @param info Struct with necessary information for enconder operation.
  * 
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  * Otherwise, it exits with err_exit() if something go wrong.
  */
 void	get_unzipped_time(t_semaphore *sem, t_posix_shm *shm_dec, t_info *info);
@@ -147,7 +147,7 @@ void	get_unzipped_time(t_semaphore *sem, t_posix_shm *shm_dec, t_info *info);
  * 
  * @param info Struct with necessary information for enconder operation.
  * 
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	print_unzip_result(t_info *info);
 

@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 13:01:14 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 09:15:36 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:36:30 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ typedef struct s_semaphore
  * @param sem A struct containing the semaphores to be inicialized.
  * @param process This variable specifies if the semaphore is to be created
  * create by decoder program (i.e. DECODER tag which is equivalent to 0) or 
- * just accessed by encoder (i.e. ENCODER tag which is equivalent to 1)
+ * just accessed by encoder (i.e. ENCODER tag which is equivalent to 1).
  * 
  * @return (void) If semaphore inicialization is unsuccessful, then it exits
  * the program with err_exit() function.
@@ -118,8 +118,8 @@ void    close_semaphores(t_semaphore *sem);
  * @param to_write Content to be written to the shared memory.
  * @param len to_write length necessary to allocate the exact size with mmap().
  * 
- * @return (void) If something go wrong through the proccess of memory shared
- * creation, the function will exits the program with err_exit().
+ * @return (void) If something goes wrong through the proccess of memory shared
+ * creation, the function will exit the program with err_exit().
  */
 void    set_shm_int(t_posix_shm *shm, char *shm_fname, u_int *to_write, size_t len);
 
@@ -132,8 +132,8 @@ void    set_shm_int(t_posix_shm *shm, char *shm_fname, u_int *to_write, size_t l
  * @param to_write Content to be written to the shared memory.
  * @param len to_write length necessary to allocate the exact size with mmap().
  * 
- * @return (void) If something go wrong through the proccess of memory shared
- * creation, the function will exits the program with err_exit().
+ * @return (void) If something goes wrong through the proccess of memory shared
+ * creation, the function will exit the program with err_exit().
  */
 void    set_shm_char(t_posix_shm *shm, char *shm_fname, u_char *to_write, size_t len);
 
@@ -145,8 +145,8 @@ void    set_shm_char(t_posix_shm *shm, char *shm_fname, u_char *to_write, size_t
  * to be read.
  * @param shm_fname The shared memory file descriptor name to be read.
  * 
- * @return (void) If something go wrong through the proccess of memory shared
- * creation, the function will exits the program with err_exit().
+ * @return (void) If something goes wrong through the proccess of memory shared
+ * creation, the function will exit the program with err_exit().
  */
 void    read_shm_int(t_posix_shm *shm, char *shm_fname);
 
@@ -158,8 +158,8 @@ void    read_shm_int(t_posix_shm *shm, char *shm_fname);
  * to be read.
  * @param shm_fname The shared memory file descriptor name to be read.
  * 
- * @return (void) If something go wrong through the proccess of memory shared
- * creation, the function will exits the program with err_exit().
+ * @return (void) If something goes wrong through the proccess of memory shared
+ * creation, the function will exit the program with err_exit().
  */
 void    read_shm_char(t_posix_shm *shm, char *shm_fname);
 
@@ -173,8 +173,8 @@ void    read_shm_char(t_posix_shm *shm, char *shm_fname);
  * or decoder program, i.e. PRODUCER and CONSUMER tag which stands for 0 and 
  * 1 respectively.
  * 
- * @return (void) If something go wrong through the proccess of memory shared
- * creation, the function will exits the program with err_exit().
+ * @return (void) If something goes wrong through the proccess of memory shared
+ * creation, the function will exit the program with err_exit().
  */
 void    free_shm(t_posix_shm *shm, char *shm_fname, int shm_type);
 

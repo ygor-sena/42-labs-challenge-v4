@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 01:04:07 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 09:53:37 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:03:41 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,4 @@ void	print_unzip_result(t_info *info)
 	printf("File size in bytes: %ld\n", info->total_bytes);
 	printf("Total bytes compressed: %ld\n", info->total_bytes - info->comp_bytes);
 	printf("Decompression time is: %s\n", info->unzip_time);
-	
 }

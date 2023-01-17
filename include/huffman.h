@@ -6,7 +6,7 @@
 /*   By: yde-goes <yde-goes@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 15:46:06 by yde-goes          #+#    #+#             */
-/*   Updated: 2023/01/15 12:54:18 by yde-goes         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:37:09 by yde-goes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ typedef struct s_huffman
  * characters occurrences.
  * @param tab Array that stores the characters frequency. It has a size of
  * SIZE tag, i.e. 256, which stands for the characters between 0 and 255.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	init_table(u_int *tab);
 
@@ -92,7 +92,7 @@ void	init_table(u_int *tab);
  * @param txt The string that has the content of the file.
  * @param tab Array that stores the characters frequency. It has a size of
  * SIZE tag, i.e. 256, which stands for the characters between 0 and 255.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	write_freq(u_char *txt, u_int *tab);
 
@@ -100,7 +100,7 @@ void	write_freq(u_char *txt, u_int *tab);
  * @brief This function inicializes the list that stores the
  * first node of the tree.
  * @param list Points to the first element of the t_node struct and its size.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	init_list(t_list *list);
 
@@ -111,7 +111,7 @@ void	init_list(t_list *list);
  * @param tab Value of the frequency of the character i.
  * @param right Value of the right node of the tree.
  * @param left Value of the left node of the tree.
- * @return (t_node) Successfully create a node. Otherwise, it retuns NULL
+ * @return (t_node) Successfully creates a node. Otherwise, it returns NULL
  * if the function could not allocate the required memory for its creation.
  */
 t_node	*create_node(size_t i, u_int tab, struct s_node *right, struct s_node *left);
@@ -123,7 +123,7 @@ t_node	*create_node(size_t i, u_int tab, struct s_node *right, struct s_node *le
  * @param tab Value of the frequency of the character i.
  * @param list Node of the singular linked list that stores the first and
  * second parameter.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	fill_list(u_int *tab, t_list *list);
 
@@ -133,7 +133,7 @@ void	fill_list(u_int *tab, t_list *list);
  * is the first and the biggest one is the last.
  * @param list A list the contains existing sorted nodes of frequencies.
  * @param node Node to be inserted and sorted into the list.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	sort_insert(t_list *list, t_node *node);
 
@@ -159,7 +159,7 @@ t_node	*create_tree(t_list *list);
 /**
  * @brief This function free a tree.
  * @param tree t_node containing the root node to a tree.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	free_tree(t_node *tree);
 
@@ -189,14 +189,14 @@ char	**init_dictionary(size_t column);
  * @param path The path in a tree until a leaf is found. The path receives
  * a sequence of 0 and 1 where 0 is a node to the right and 1 is a node to
  * the left.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	generate_dictionary(char **dict, t_node *root, char *path, size_t column);
 
 /**
- * @brief This function free a dictionary.
+ * @brief This function frees a dictionary.
  * @param tree The bidimensional array storing the dictionary.
- * @return (void) Successfully do the operations descrited at brief.
+ * @return (void) Successfully does the operations descrited at brief.
  */
 void	free_dictionary(char **dictionary);
 
@@ -217,8 +217,8 @@ char	*encode(char **dictionary, u_char *txt);
  * to binary. The result is written in a binary file, which is the
  * compressed file.
  * @param str The encoded text to be zipped.
- * @return (void) Successfully do the operations descrited at brief.
- * Otherwise, it exits with err_exit() if something go wrong.
+ * @return (void) Successfully does the operations descrited at brief.
+ * Otherwise, it exits with err_exit() if something goes wrong.
  */
 void	compression(char *str);
 
