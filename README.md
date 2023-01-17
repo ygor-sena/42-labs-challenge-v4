@@ -41,7 +41,7 @@ valgrind --leak-check=full --show-leak-kinds=all ./decoder
 ./encoder example.txt
 ```
 
-O `encoder` lerá o arquivo example.txt, fará sua compressão e enviará informações para descompressão ao `decoder`. Enquanto recebe e processa as informações, o `decoder` exibirá na saída padrão do terminal a mensagem `Reading from encoder...`. Após decomprimir o arquivo, o encoder envia as informações sobre o resultado da compilação de volta ao `encoder` e este exibe-as no prompt de comando.
+O `encoder` lerá o arquivo example.txt, fará sua compressão e enviará informações para descompressão ao `decoder`. Enquanto recebe e processa as informações, o `decoder` exibirá na saída padrão do terminal a mensagem `Waiting for encoder data...`. Após decomprimir o arquivo, o encoder envia as informações sobre o resultado da compilação de volta ao `encoder` e este exibe-as no prompt de comando.
 
 #### 5) Exemplo de utilização
 
